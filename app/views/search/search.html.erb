@@ -1,0 +1,34 @@
+<h1>Elastic search for urls</h1>
+
+<%= form_for :term, url: search_path, method: :get do |form| %>
+   <p>
+    <%= text_field_tag :term %>
+    <%= submit_tag "Search" %>
+  </p>
+<% end %>
+
+<% unless @urls.nil? %>
+  <% if @urls.empty? %>
+    <h2>No urls found matching your query.</h2>
+  <% else %>
+    <h2>Search results</h2>
+
+    <table style="width: 100%;">
+      <thead>
+         <tr>
+           <th>Long_Url</th>
+           <th>Short_Url</th>
+         </tr>
+      </thead>
+
+      <tbody>
+        <% @urls.each do |url| %>
+          <tr>
+            <td><%= url.long_url %></td>
+            <td><%= url.short_url %></td>
+          </tr>
+        <% end %>
+      <tbody>
+    </table>
+  <% end %>
+<% end %>

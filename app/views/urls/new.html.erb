@@ -1,0 +1,52 @@
+<% provide(:title, "Create Short URL") %>
+<h1>Get long URL</h1>
+
+
+
+<div class="row">
+ <div class="col-md-5 col-md-offset-3">
+ 
+<% if @url.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@url.errors.count, "error") %> prohibited
+        this url from being generated:
+      </h2>
+      <ul>
+        <% @url.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+<% flash.each do |key, value| %>
+  	<div class="alert alert-<%= key %>"><%= value %></div>
+ <%end%>
+
+
+<%= form_for @url,method: :post do |form| %>
+    <%= form.label :long_url %><br>
+    <%= form.text_field :long_url %><br>
+   <%= form.submit "Create Url",class: "btn btn-primary"%>
+<% end %><br>
+<%= link_to 'Back',urls_path %>
+
+<br>
+<br>
+
+<%= form_with scope: :url, url: '/long_url', method: :get,local: true do |form| %> 
+<p>
+    <%= form.label :Short_url %><br>
+    <%= form.text_field :short_url %><br>
+</p>
+ 
+<p>
+    <%= form.submit "Create Url",class: "btn btn-primary"%> <br>
+</p>
+<% end %>
+<%= link_to 'Back',urls_path %>
+
+
+</div>
+</div>
+
