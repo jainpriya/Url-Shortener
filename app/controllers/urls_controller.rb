@@ -34,6 +34,7 @@ class UrlsController < ApplicationController
 	end
 
 	def get_long_url
+		abc
 		@url = Url.new
 		@url.short_url=params[:url][:short_url]
 		respond_to do |format|
