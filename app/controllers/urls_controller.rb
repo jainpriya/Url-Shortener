@@ -4,7 +4,7 @@ class UrlsController < ApplicationController
 
 
 	def index
-		abcd
+		puts("hello")
 	end
 
 	def new
