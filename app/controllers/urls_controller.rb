@@ -13,7 +13,7 @@ class UrlsController < ApplicationController
 		flash[:notice] = ""
 	end
 
-	 create
+	 def create
 		@url = Url.new,
 		@url.long_url = sanitize(params[:url][:long_url])
 		respond_to do |format|
