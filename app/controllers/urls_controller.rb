@@ -4,7 +4,7 @@ class UrlsController < ApplicationController
 
 
 	def index
-	end
+		puts ("cnb cxhvch")
 
 	def new
 		@url = Url.new
