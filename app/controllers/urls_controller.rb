@@ -4,6 +4,7 @@ class UrlsController < ApplicationController
 
 
 	def index
+		abcd
 	end
 
 	def new
