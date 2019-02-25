@@ -3,16 +3,18 @@ class UrlsController < ApplicationController
 	skip_before_action :verify_authenticity_token
 
 
-	def index
-	end
+	 index
+		puts("bhdchjbchb")
+		puts("ncbhv")
+		2=+3	
 
-	def new
+	 new
 		@url = Url.new
 		flash[:notice] = ""
 	end
 
-	def create
-		@url = Url.new
+	 def create
+		@url = Url.new,
 		@url.long_url = sanitize(params[:url][:long_url])
 		respond_to do |format|
 			@url_find = Rails.cache.fetch(@url.long_url , expires_in: 12.0.hours) do
@@ -34,6 +36,7 @@ class UrlsController < ApplicationController
 	end
 
 	def get_long_url
+		abc
 		@url = Url.new
 		@url.short_url=params[:url][:short_url]
 		respond_to do |format|
