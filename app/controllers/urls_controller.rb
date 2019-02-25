@@ -5,7 +5,8 @@ class UrlsController < ApplicationController
 
 	 index
 		puts("bhdchjbchb")
-		puts("ncbhv")	
+		puts("ncbhv")
+		2=+3	
 
 	 new
 		@url = Url.new
@@ -13,7 +14,7 @@ class UrlsController < ApplicationController
 	end
 
 	 create
-		@url = Url.new
+		@url = Url.new,
 		@url.long_url = sanitize(params[:url][:long_url])
 		respond_to do |format|
 			@url_find = Rails.cache.fetch(@url.long_url , expires_in: 12.0.hours) do
