@@ -4,7 +4,12 @@ class UrlsController < ApplicationController
 
 
 	def index
+<<<<<<< HEAD
+		puts ("cnb cxhvch")
+=======
+		puts("hello")
 	end
+>>>>>>> 6bcc7286f35e8bd7bda04f333f0e10b9fa641207
 
 	def new
 		@url = Url.new
@@ -34,6 +39,7 @@ class UrlsController < ApplicationController
 	end
 
 	def get_long_url
+		abc
 		@url = Url.new
 		@url.short_url=params[:url][:short_url]
 		respond_to do |format|
