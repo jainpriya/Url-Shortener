@@ -29,7 +29,7 @@ class UrlsController < ApplicationController
 		    	format.html {render :show}
 		    	format.json { render json: {"response": @url.short_url} }
 		    end
-		end
+		
 	
 
 	def show
