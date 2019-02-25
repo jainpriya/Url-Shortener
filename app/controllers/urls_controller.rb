@@ -7,7 +7,7 @@ class UrlsController < ApplicationController
 		puts("bhdchjbchb")
 		puts("ncbhv")	
 
-	def new
+	 new
 		@url = Url.new
 		flash[:notice] = ""
 	end
