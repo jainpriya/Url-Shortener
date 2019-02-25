@@ -3,9 +3,9 @@ class UrlsController < ApplicationController
 	skip_before_action :verify_authenticity_token
 
 
-	def index
+	 index
 		puts("bhdchjbchb")
-	end
+		puts("ncbhv")	
 
 	def new
 		@url = Url.new
