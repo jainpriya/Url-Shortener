@@ -6,7 +6,7 @@ class UrlsController < ApplicationController
 	 def index
 	 end	
 
-	 def new
+	def new
 		@url = Url.new
 		flash[:notice] = ""
 	end
