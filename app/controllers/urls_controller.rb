@@ -3,16 +3,16 @@ class UrlsController < ApplicationController
 	skip_before_action :verify_authenticity_token
 
 
-	def index
-	end
+	  def index
+		
 
 	def new
 		@url = Url.new
 		flash[:notice] = ""
 	end
 
-	def create
-		@url = Url.new
+	 def create
+		@url = Url.new,
 		@url.long_url = sanitize(params[:url][:long_url])
 		respond_to do |format|
 			@url_find = Rails.cache.fetch(@url.long_url , expires_in: 12.0.hours) do
@@ -27,13 +27,16 @@ class UrlsController < ApplicationController
 		    	format.html {render :show}
 		    	format.json { render json: {"response": @url.short_url} }
 		    end
-		end
+		 end
 	end
+		
+	
 
 	def show
 	end
 
 	def get_long_url
+		abc
 		@url = Url.new
 		@url.short_url=params[:url][:short_url]
 		respond_to do |format|
