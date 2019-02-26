@@ -3,12 +3,10 @@ class UrlsController < ApplicationController
 	skip_before_action :verify_authenticity_token
 
 
-	 index
-		puts("bhdchjbchb")
-		puts("ncbhv")
-		2=+3	
+	 def index
+	 end	
 
-	 new
+	 def new
 		@url = Url.new
 		flash[:notice] = ""
 	end
@@ -29,6 +27,8 @@ class UrlsController < ApplicationController
 		    	format.html {render :show}
 		    	format.json { render json: {"response": @url.short_url} }
 		    end
+		 end
+	end
 		
 	
 
