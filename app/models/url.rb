@@ -11,7 +11,7 @@ class Url < ApplicationRecord
     mappings dynamic: false do
       indexes :short_url, type: :text
     end
-  end
+ 
 
 
 	require "redis"
