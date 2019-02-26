@@ -4,7 +4,7 @@ class UrlsController < ApplicationController
 
 
 	  index
-	 end	
+		
 
 	def new
 		@url = Url.new
