@@ -2,11 +2,6 @@ class UrlsController < ApplicationController
 
 	skip_before_action :verify_authenticity_token
 
-
-	 index
-		puts("bhdchjbchb")
-		puts("ncbhv")	
-
 	def new
 		@url = Url.new
 		flash[:notice] = ""
