@@ -1,0 +1,15 @@
+current directory: /Users/priya/Url-Shortener/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20190227-97412-1ftj8y.rb extconf.rb
+creating Makefile
+
+current directory: /Users/priya/Url-Shortener/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Users/priya/Url-Shortener/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Users/priya/Url-Shortener/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20190227-97412-6tc7dk/bindex
