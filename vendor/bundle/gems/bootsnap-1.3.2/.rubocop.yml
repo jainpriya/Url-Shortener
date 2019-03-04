@@ -5,7 +5,7 @@ AllCops:
   Exclude:
     - 'vendor/**/*'
     - 'tmp/**/*'
-    - 'db/seeds.rb'
+    - db/seeds.rb
   TargetRubyVersion: '2.2'
 
 # This doesn't take into account retrying from an exception
