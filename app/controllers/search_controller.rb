@@ -7,7 +7,7 @@ class SearchController < ApplicationController
         else
           @urls = Url.search (params[:term]),fields: [:short_url], match: :word_start
     	end
-	end
+	
 end
 
 
