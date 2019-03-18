@@ -1,0 +1,15 @@
+current directory: /Users/priya/Url-Shortener/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20190227-97412-1xekodq.rb extconf.rb
+creating Makefile
+
+current directory: /Users/priya/Url-Shortener/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/priya/Url-Shortener/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/priya/Url-Shortener/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20190227-97412-1d9t8e3

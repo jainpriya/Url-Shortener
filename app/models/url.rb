@@ -11,7 +11,7 @@ class Url < ApplicationRecord
     mappings dynamic: false do
       indexes :short_url, type: :text
     end
-  end
+ 
 
 
 	require "redis"
@@ -44,6 +44,7 @@ class Url < ApplicationRecord
   	end
 
     def self.shorten_url(long_url)
+    	puts "hj"
     	@url = Url.new
     	@url.long_url = long_url
 		@url.short_url = self.generate_short_url(long_url)

@@ -2,10 +2,6 @@ class UrlsController < ApplicationController
 
 	skip_before_action :verify_authenticity_token
 
-
-	def index
-	end
-
 	def new
 		@url = Url.new
 		flash[:notice] = ""
@@ -34,6 +30,7 @@ class UrlsController < ApplicationController
 	end
 
 	def get_long_url
+		abc
 		@url = Url.new
 		@url.short_url=params[:url][:short_url]
 		respond_to do |format|
