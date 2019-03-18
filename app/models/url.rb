@@ -45,7 +45,7 @@ class Url < ApplicationRecord
 
     def self.shorten_url(long_url)
     	puts "nxb"
-    	@url = Url.new
+    	@url = Url.nw
     	@url.long_url = long_url
 		@url.short_url = self.generate_short_url(long_url)
 		resp = @url.save! ? @url.short_url : "invalid url"
